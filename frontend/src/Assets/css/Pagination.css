@@ -1,0 +1,85 @@
+/* Pagination.css */
+
+.pagination-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.pagination {
+  display: flex;
+  list-style: none;
+  gap: 0.4rem;
+  align-items: center;
+}
+
+.page-item {
+  display: inline-block;
+}
+
+.page-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 36px;
+  height: 36px;
+  padding: 0 0.5rem;
+  border: 1px solid #ddd;
+  background-color: white;
+  color: #333;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.page-prev, .page-next {
+  padding: 0 1rem;
+  font-weight: 500;
+}
+
+.page-prev i {
+  margin-right: 0.3rem;
+}
+
+.page-next i {
+  margin-left: 0.3rem;
+}
+
+.page-link:hover {
+  background-color: #f0f0f0;
+  border-color: #ccc;
+}
+
+.page-item.active .page-link {
+  background-color: #007bff;
+  color: white;
+  border-color: #007bff;
+}
+
+.page-item.disabled .page-link {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.page-ellipsis {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 36px;
+  height: 36px;
+  color: #666;
+  font-size: 1.2rem;
+}
+
+@media screen and (max-width: 576px) {
+  .page-link {
+    min-width: 32px;
+    height: 32px;
+    font-size: 0.8rem;
+  }
+
+  .page-prev, .page-next {
+    padding: 0 0.7rem;
+  }
+}

@@ -1,0 +1,466 @@
+/* Home.css */
+
+.home-page {
+  width: 100%;
+}
+
+/* Common styles for event sections */
+.events-section {
+  padding: 4rem 0;
+}
+
+.upcoming-events {
+  background-color: #f8f9fa;
+}
+
+.current-events {
+  background-color: #ffffff;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.section-title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 0.8rem;
+  position: relative;
+  display: inline-block;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background-color: #007bff;
+}
+
+.section-description {
+  font-size: 1.1rem;
+  color: #666;
+  max-width: 700px;
+  margin: 0 auto;
+  margin-top: 1.5rem;
+  line-height: 1.6;
+}
+
+/* Event cards grid layout */
+.event-cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  margin-bottom: 2.5rem;
+}
+
+
+/* Show more button styles */
+.show-more-container {
+  text-align: center;
+}
+
+.show-more-btn {
+  background-color: transparent;
+  color: #007bff;
+  border: 2px solid #007bff;
+  padding: 0.8rem 2.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.show-more-btn:hover {
+  background-color: #007bff;
+  color: white;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 1024px) {
+  .event-cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .event-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .section-title {
+    font-size: 1.8rem;
+  }
+  
+  .section-description {
+    font-size: 1rem;
+  }
+  
+  .events-section {
+    padding: 3rem 0;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .event-cards {
+    grid-template-columns: 1fr;
+  }
+  
+  .section-header {
+    margin-bottom: 2rem;
+  }
+}
+
+
+/* ==========================
+HERO SLIDER CSS START
+========================== */
+
+/* HeroSlider.css */
+
+.hero-slider {
+  position: relative;
+  width: 100%;
+  height: 600px;
+  overflow: hidden;
+}
+
+.slides-container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transition: opacity 0.8s ease-in-out;
+  display: flex;
+  align-items: center;
+  z-index: 1;
+}
+
+.slide::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.4) 50%, rgba(0, 0, 0, 0.1) 100%);
+  z-index: -1;
+}
+
+.slide.active {
+  opacity: 1;
+  z-index: 2;
+}
+
+.slide-content {
+  max-width: 600px;
+  padding: 0 3rem;
+  margin-left: 5%;
+  color: white;
+}
+
+.slide-title {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.slide-description {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.slide-details {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.slide-date, .slide-location {
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+}
+
+.slide-date i, .slide-location i {
+  margin-right: 0.5rem;
+  color: #007bff;
+}
+
+.slide-btn {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 0.8rem 2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.slide-btn:hover {
+  background-color: #0056b3;
+}
+
+/* Navigation arrows */
+.slider-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 50px;
+  height: 50px;
+  background-color: rgba(255, 255, 255, 0.2);
+  border: none;
+  border-radius: 50%;
+  color: white;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10;
+  transition: background-color 0.3s ease;
+}
+
+.slider-arrow:hover {
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+.slider-arrow-prev {
+  left: 20px;
+}
+
+.slider-arrow-next {
+  right: 20px;
+}
+
+/* Slide indicators/dots */
+.slider-indicators {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 12px;
+  z-index: 10;
+}
+
+.slider-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.4);
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.slider-dot.active {
+  background-color: #007bff;
+  transform: scale(1.2);
+}
+
+/* Responsive styles */
+@media screen and (max-width: 992px) {
+  .hero-slider {
+    height: 500px;
+  }
+  
+  .slide-title {
+    font-size: 2.5rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .hero-slider {
+    height: 450px;
+  }
+  
+  .slide-content {
+    max-width: 450px;
+    padding: 0 2rem;
+  }
+  
+  .slide-title {
+    font-size: 2rem;
+  }
+  
+  .slide-description {
+    font-size: 1.1rem;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .hero-slider {
+    height: 400px;
+  }
+  
+  .slide-content {
+    text-align: center;
+    padding: 0 1.5rem;
+    margin: 0 auto;
+  }
+  
+  .slide-title {
+    font-size: 1.8rem;
+  }
+  
+  .slide-details {
+    flex-direction: column;
+    gap: 0.5rem;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .slider-arrow {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+/* =========================
+EVENT CARDS CSS START
+======================== */
+
+/* EventCard.css */
+
+.event-card {
+  background-color: #ffffff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.event-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.event-image {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+}
+
+.event-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.event-card:hover .event-image img {
+  transform: scale(1.1);
+}
+
+.event-category {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background-color: #007bff;
+  color: white;
+  padding: 4px 10px;
+  font-size: 0.75rem;
+  border-radius: 20px;
+  font-weight: 600;
+}
+
+.event-content {
+  padding: 1.5rem;
+}
+
+.event-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #333;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  height: 2.8rem;
+}
+
+.event-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+  margin-bottom: 1.2rem;
+}
+
+.event-detail {
+  display: flex;
+  align-items: center;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.event-detail i {
+  color: #007bff;
+  margin-right: 8px;
+  width: 16px;
+}
+
+.event-button {
+  width: 100%;
+  background-color: transparent;
+  color: #007bff;
+  border: 1px solid #007bff;
+  padding: 0.7rem;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.event-button:hover {
+  background-color: #007bff;
+  color: white;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 1024px) {
+  .event-title {
+    font-size: 1.1rem;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .event-image {
+    height: 220px;
+  }
+  
+  .event-content {
+    padding: 1.2rem;
+  }
+}

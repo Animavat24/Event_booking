@@ -55,28 +55,28 @@ const SubCategoryEvents = () => {
       description: 'Award-winning photographs from around the globe.',
       tickets_available: 100
     },
-    {
-      id: 205,
-      title: 'Sculpture Garden Tour',
-      image: 'https://via.placeholder.com/300x200',
-      category: 'Art & Culture',
-      date: 'July 3, 2025',
-      location: 'City Gallery - Outdoor Garden',
-      price: '$8',
-      description: 'Walk through our beautiful sculpture garden featuring works from renowned artists.',
-      tickets_available: 50
-    },
-    {
-      id: 206,
-      title: 'Art History Lecture',
-      image: 'https://via.placeholder.com/300x200',
-      category: 'Art & Culture',
-      date: 'July 5, 2025',
-      location: 'City Gallery - Lecture Hall',
-      price: '$5',
-      description: 'Professor Smith discusses the evolution of modern art in the 21st century.',
-      tickets_available: 80
-    },
+    // {
+    //   id: 205,
+    //   title: 'Sculpture Garden Tour',
+    //   image: 'https://via.placeholder.com/300x200',
+    //   category: 'Art & Culture',
+    //   date: 'July 3, 2025',
+    //   location: 'City Gallery - Outdoor Garden',
+    //   price: '$8',
+    //   description: 'Walk through our beautiful sculpture garden featuring works from renowned artists.',
+    //   tickets_available: 50
+    // },
+    // {
+    //   id: 206,
+    //   title: 'Art History Lecture',
+    //   image: 'https://via.placeholder.com/300x200',
+    //   category: 'Art & Culture',
+    //   date: 'July 5, 2025',
+    //   location: 'City Gallery - Lecture Hall',
+    //   price: '$5',
+    //   description: 'Professor Smith discusses the evolution of modern art in the 21st century.',
+    //   tickets_available: 80
+    // },
     // Sports category events
     {
       id: 301,
@@ -100,6 +100,8 @@ const SubCategoryEvents = () => {
       description: 'Learn nutrition, pacing, and recovery strategies for marathon runners.',
       tickets_available: 40
     },
+    
+    
     // Add more sample events for other categories as needed
   ];
 

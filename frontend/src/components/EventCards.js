@@ -1,7 +1,18 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import '../Assets/css/Homepage.css';
 
 const EventCard = ({ event }) => {
+  const navigate = useNavigate();
+
+  // Handle view details button click
+  const handleViewDetails = () => {
+    // Navigate to subcategory page with event data
+    navigate(`/events/category/${encodeURIComponent(event.category)}`, {
+      state: { eventData: event }
+    });
+  };
+
   return (
     <div className="event-card">
       <div className="event-image">
@@ -20,7 +31,7 @@ const EventCard = ({ event }) => {
             <span>{event.location}</span>
           </div>
         </div>
-        <button className="event-button">View Details</button>
+        <button className="event-button" onClick={handleViewDetails}>View Details</button>
       </div>
     </div>
   );

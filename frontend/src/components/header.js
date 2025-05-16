@@ -33,7 +33,9 @@ const Header = () => {
 
           {/* Right side - Login button and hamburger icon */}
           <div className="header-right">
+            <Link to="/login" className="login-link">
             <button className="login-button">Login</button>
+            </Link>
             <div className="hamburger" onClick={toggleSidebar}>
               <span className="hamburger-line"></span>
               <span className="hamburger-line"></span>

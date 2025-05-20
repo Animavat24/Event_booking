@@ -1,0 +1,17 @@
+.events-chart {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.events-chart h3 {
+  margin-top: 0;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.chart-container {
+  flex: 1;
+  min-height: 300px;
+  position: relative;
+}

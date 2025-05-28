@@ -2,26 +2,19 @@ import api from './api';
 
 export const login = async (credentials) => {
   try {
-    // Replace with actual API call
-    // const response = await api.post('/auth/login', credentials);
-    // return response;
-    
-    // Mock response
-    return Promise.resolve({
-      user: {
-        id: 1,
-        name: 'Admin',
-        email: credentials.email,
-        role: 'admin'
-      },
-      token: 'mock-token'
-    });
+    const response = await api.post('/auth/login', credentials);
+    localStorage.setItem('token', response.token);
+    return response;
   } catch (error) {
     throw error;
   }
 };
 
 export const logout = async () => {
-  // Add logout API call if needed
-  return Promise.resolve();
+  try {
+    await api.post('/auth/logout');
+    localStorage.removeItem('token');
+  } catch (error) {
+    console.error('Logout error:', error);
+  }
 };
